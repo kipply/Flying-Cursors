@@ -1,15 +1,15 @@
-$(document).ready(function() {
-    (function myLoop (i) {          
-        setTimeout(function () {   
+$(document).ready(function () {
+    (function myLoop(i) {         
+        setTimeout(function () {  
                 generateCursor();
             animateDiv();//  your code here                
                 if (--i) myLoop(i);
             }, 3000)
-        })(30);    
+        })(7);    
     });
-function generateCursor(){
+function generateCursor() {
     
-        $( ".a" ).clone().appendTo( "#container" );
+    $( ".a" ).clone().appendTo( "#container" );
 }
 
 function makeNewPosition($container) {
@@ -28,33 +28,16 @@ function makeNewPosition($container) {
 
 function animateDiv( ) {
 
-  $( ".a" ).each(function( i ) {
-    var newq = makeNewPosition($(this).parent());
-    var oldq = $(this).offset();
-    var speed = getSpeed([oldq.top, oldq.left], newq);
+    $( ".a" ).each(function( i ) {
+        var newq = makeNewPosition($(this).parent()),
+            oldq = $(this).offset(),
+            speed = Math.random() * 5000;
 
-    $(this).animate({
-        top: newq[0],
-        left: newq[1]
-    }, speed, function() {
-        animateDiv();
+        $(this).animate({
+            top: newq[0],
+            left: newq[1]
+        }, speed, function () {
+            animateDiv();
+        });
     });
-  });
-}
-
-
-
-function getSpeed(prev, next) {
-
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-
-    var greatest = x > y ? x : y;
-
-    var speedModifier = Math.random() * (.05 - 1) + 1;
-
-    var speed = Math.ceil(greatest / speedModifier);
-
-    return speed;
-
 }
