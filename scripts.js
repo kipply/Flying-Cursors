@@ -1,8 +1,8 @@
 $(document).ready(function () {
     
-    function makeNewPosition($container) {
-        var nh = Math.random() * 100,
-            nw = Math.random() * 100;
+   function makeNewPosition($container) {
+        var nh = Math.random() * 98,
+            nw = Math.random() * 98;
         return [nh, nw];
 
     }
@@ -27,5 +27,5 @@ $(document).ready(function () {
             animateDiv();//  your code here
                 if (--i) myLoop(i);
             }, 3000);
-        })(8);
+        })(9);
     });
