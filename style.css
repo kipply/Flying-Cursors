@@ -19,10 +19,7 @@ html>body #container {
     max-width:100%;
 }
 
-.a {
-    width: 15px;
-    height:25px;
-    background-image: url('fakecursor.png');
+.cursor {
     position:fixed;
     
 }

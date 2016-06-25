@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     function animateDiv( ) {
 
-        $( ".a" ).each(function( i ) {
+        $( ".cursor" ).each(function( i ) {
             var newq = makeNewPosition($(this).parent()),
                 speed = Math.random() * 5000;
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
     (function laLoop(i) {
         setTimeout(function () {
-        $( ".a" ).clone().appendTo( "#container" );
+        $( ".cursor" ).clone().appendTo( "#container" );
             animateDiv();//  your code here
                 if (--i) laLoop(i);
             }, 3000);
