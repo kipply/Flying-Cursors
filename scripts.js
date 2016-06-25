@@ -1,31 +1,26 @@
 $(document).ready(function () {
     
     function makeNewPosition($container) {
-        $container = ($container || $(window))
-        var h = $container.height() - 50;
-        var w = $container.width() - 50;
-
-        var nh = Math.floor(Math.random() * h);
-        var nw = Math.floor(Math.random() * w);
-
+        var nh = Math.random() * 100,
+            nw = Math.random() * 100;
         return [nh, nw];
 
     }
 
     function animateDiv( ) {
 
-    $( ".a" ).each(function( i ) {
-        var newq = makeNewPosition($(this).parent()),
-            speed = Math.random() * 5000;
+        $( ".a" ).each(function( i ) {
+            var newq = makeNewPosition($(this).parent()),
+                speed = Math.random() * 5000;
 
-        $(this).velocity({
-            top: newq[0],
-            left: newq[1]
-        }, speed, function () {
-            animateDiv();
+            $(this).velocity({
+                top: newq[0] +'%',
+                left: newq[1]+'%'
+            }, speed, function () {
+                animateDiv();
+            });
         });
-    });
-}
+    }
     (function myLoop(i) {
         setTimeout(function () {
         $( ".a" ).clone().appendTo( "#container" );
