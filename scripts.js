@@ -1,8 +1,6 @@
 $(document).ready(function () {
     
     function makeNewPosition($container) {
-
-        // Get viewport dimensions (remove the dimension of the div)
         $container = ($container || $(window))
         var h = $container.height() - 50;
         var w = $container.width() - 50;
