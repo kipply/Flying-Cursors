@@ -1,0 +1,29 @@
+{
+  "name": "Flying Cursors",
+  "version": "4.2.0",
+  "manifest_version": 2,
+  "description": "Adds a bunch of cursors",
+  "background": {
+    "scripts": [
+        "jquery.min.js",
+          "velocity.min.js",
+        "background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.facebook.com/*",
+        "http://*.facebook.com/*"
+      ],
+      "js": [
+          "jquery.min.js",
+
+          "velocity.min.js",
+            "content.js"
+      ]
+    }
+  ]
+}
