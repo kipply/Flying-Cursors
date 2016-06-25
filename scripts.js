@@ -21,11 +21,11 @@ $(document).ready(function () {
             });
         });
     }
-    (function myLoop(i) {
+    (function laLoop(i) {
         setTimeout(function () {
         $( ".a" ).clone().appendTo( "#container" );
             animateDiv();//  your code here
-                if (--i) myLoop(i);
+                if (--i) laLoop(i);
             }, 3000);
         })(9);
     });
