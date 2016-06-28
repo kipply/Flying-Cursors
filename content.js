@@ -1,10 +1,9 @@
 
 $(document).ready(function () {
     $("body html").css({"height":"100%", "margin":"0"});
-    var url = chrome.extension.getURL('cursor.ani');
-    $( "html" ).append( "<div id='container'><img src ='
-        background-image:url('chrome-extension://__MSG_@@extension_id__/fakecursor.png');' class='cursor'></div> ");
-    $("#container").css({"min-height":"100%", "background-color": "aqua",  "max-height":"100%", "max-width":"100%"});
+    $( "body" ).append( "<div id='container'><img style='height: 3%;' class='cursor' src='https://raw.githubusercontent.com/carolyfisher/Flying-Cursors/master/fakecursor.png'></div> ");
+    $("container").css({"cursor":"url('https://raw.githubusercontent.com/carolyfisher/Flying-Cursors/master/fakecursor.png') !important"});
+    $("#container").css({"min-height":"100%", "max-height":"100%", "max-width":"100%", "position": "fixed"});
     $(".cursor").css({"position":"fixed"});
 
    function makeNewPosition($container) {
