@@ -1,9 +1,8 @@
 
 $(document).ready(function () {
-    $("body html").css({"height":"100%", "margin":"0"});
-    $( "body" ).append( "<div id='container'><img style='height: 3%;' class='cursor' src='https://raw.githubusercontent.com/carolyfisher/Flying-Cursors/master/fakecursor.png'></div> ");
-    $("container").css({"cursor":"url('https://raw.githubusercontent.com/carolyfisher/Flying-Cursors/master/fakecursor.png') !important"});
-    $("#container").css({"min-height":"100%", "max-height":"100%", "max-width":"100%", "position": "fixed"});
+//    $("body html").css({"height":"100%", "margin":"0"});
+    $( "body" ).append( "<div id='container'><img style='height: 3%;'' class='cursor' src='https://raw.githubusercontent.com/carolyfisher/Flying-Cursors/master/fakecursor.png''></div> ");
+    $("#container").css({"position": "fixed", "z-index" : "1000"});
     $(".cursor").css({"position":"fixed"});
 
    function makeNewPosition($container) {
