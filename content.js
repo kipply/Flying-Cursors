@@ -34,5 +34,5 @@ $(document).ready(function () {
             animateDiv();
                 if (--i) laLoop(i);
             }, 5000); //delay between doubling of cursors
-        })(6); //times cursors are doubled
+        })(8); //times cursors are doubled
     });
